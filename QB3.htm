@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 3 Assignment 6</title>
+  </head>
+  <body>
+    <p id="Que"></p>
+    <p id="Ans"></p>
+
+    <script>
+      let num = parseInt(prompt("Enter a number"));
+
+      let Que = document.getElementById("Que");
+      let Ans = document.getElementById("Ans");
+
+      Que.innerText = `Given number is : ${num}`;
+
+      let temp = num;
+      let dig = 0;
+      let rev = 0;
+      while (temp > 0) {
+        dig = temp % 10;
+        rev = rev * 10 + dig;
+        temp = Math.floor(temp / 10);
+      }
+
+      Ans.innerText = `Reverse of given number is : ${rev}`;
+    </script>
+  </body>
+</html>

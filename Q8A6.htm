@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 8 Assignment 6</title>
+  </head>
+  <body>
+    <p id="DATA"></p>
+    <p id="Ans"></p>
+    <script>
+      let data = prompt("Enter data");
+
+      let Ans = document.getElementById("Ans");
+      let DATA = document.getElementById("DATA");
+
+      DATA.innerText = `Given data is : ${data}`;
+
+      if ((data >= "A" && data <= "Z") || (data >= "a" && data <= "z")) {
+        if (
+          data == "A" ||
+          data == "E" ||
+          data == "I" ||
+          data == "O" ||
+          data == "U" ||
+          data == "a" ||
+          data == "e" ||
+          data == "i" ||
+          data == "o" ||
+          data == "u"
+        ) {
+          Ans.innerText = `Given data is VOWEL : ${data}`;
+        } else {
+          Ans.innerText = `Given data is CONSONANT : ${data}`;
+        }
+      } else {
+        if (data > "0" && data < "9") {
+          Ans.innerText = `Given data is NUMBER : ${data}`;
+        } else {
+          Ans.innerText = `Given data is SPECIAL CHAR : ${data}`;
+        }
+      }
+    </script>
+  </body>
+</html>

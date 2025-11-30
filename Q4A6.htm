@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 4 Assignment 6</title>
+  </head>
+  <body>
+    <p id="Que"></p>
+    <p id="Ans"></p>
+    <script>
+      let feet = 6;
+      let inches = 6;
+
+      let feet1 = 6;
+      let inches1 = 6;
+
+      let totalFeet = feet + feet1;
+      let totalInchesh = inches + inches1;
+
+      if (totalInchesh >= 12) {
+        totalFeet = totalFeet + Math.floor(totalInchesh / 12);
+        totalInchesh = totalInchesh % 12;
+      }
+
+      let Que = document.getElementById("Que");
+      let Ans = document.getElementById("Ans");
+
+      Que.innerText = `Given Foot:Inches ${feet}: ${inches} + ${feet1}: ${inches1}`;
+      Ans.innerText = `total = ${totalFeet}: ${totalInchesh}`;
+    </script>
+  </body>
+</html>

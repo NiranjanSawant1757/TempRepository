@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      class Employee {
+        constructor(basicSalary) {
+          this.basicSalary = basicSalary;
+          this.HRA = 0;
+          this.DA = 0;
+          this.grossSalary = 0;
+        }
+
+        calculateSalary() {
+          if (this.basicSalary >= 50000) {
+            this.HRA = this.basicSalary * 0.25;
+            this.DA = this.basicSalary * 0.2;
+            this.grossSalary = basicSalary + this.HRA + this.DA;
+          } else {
+            if (this.basicSalary > 20000 && this.basicSalary < 50000) {
+              this.HRA = this.basicSalary * 0.2;
+              this.DA = this.basicSalary * 0.15;
+              this.grossSalary = this.basicSalary + this.HRA + this.DA;
+            } else {
+              if (this.basicSalary < 20000) {
+                this.HRA = this.basicSalary * 0.15;
+                this.DA = this.basicSalary * 0.1;
+                this.grossSalary = this.basicSalary + this.HRA + this.DA;
+              }
+            }
+          }
+          document.write(`Basic salary is : ${this.basicSalary}<br>`);
+          document.write(`HRA is : ${this.HRA}<br>`);
+          document.write(`DA is : ${this.DA}<br>`);
+          document.write(`Gross salary is : ${this.grossSalary}<br>`);
+        }
+      }
+
+      const basicSalary = parseInt(prompt("Enter Basic Salary"));
+
+      const emp = new Employee(basicSalary);
+      emp.calculateSalary();
+    </script>
+  </body>
+</html>

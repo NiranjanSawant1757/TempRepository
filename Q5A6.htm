@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 5 Assingment 6</title>
+  </head>
+  <body>
+    <p id="Que"></p>
+    <p id="HRA"></p>
+    <p id="DA"></p>
+    <p id="Ans"></p>
+    <script>
+      let basic = 10000;
+      let HRA = 0;
+      let DA = 0;
+      let grossSalary = 0;
+
+      let Que = document.getElementById("Que");
+      let Ans = document.getElementById("Ans");
+      let hra = document.getElementById("HRA");
+      let da = document.getElementById("DA");
+
+      if (basic >= 50000) {
+        HRA = (25 / 100) * basic;
+        DA = (20 / 100) * basic;
+        grossSalary = basic + HRA + DA;
+      } else {
+        if (basic > 20000 && basic < 50000) {
+          HRA = (20 / 100) * basic;
+          DA = (15 / 100) * basic;
+          grossSalary = basic + HRA + DA;
+        } else {
+          if (basic <= 20000) {
+            HRA = (15 / 100) * basic;
+            DA = (10 / 100) * basic;
+            grossSalary = basic + HRA + DA;
+          }
+        }
+      }
+
+      Que.innerText = `Given Salary is ${basic}`;
+      hra.innerText = `HRA is : ${HRA}`;
+      da.innerText = `DA is : ${DA}`;
+      Ans.innerText = `Gross Salary = ${grossSalary}`;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 2 Assignment 6</title>
+  </head>
+  <body>
+    <p id="para"></p>
+    <p id="percentage"></p>
+    <p id="Ans"></p>
+
+    <script>
+      let sub1 = 50;
+      let sub2 = 60;
+      let sub3 = 70;
+      let sub4 = 80;
+      let sub5 = 90;
+
+      let per = (sub1 + sub2 + sub3 + sub4 + sub5) / 5;
+
+      let percentage = document.getElementById("percentage");
+      percentage.innerText = "percentage of given marks is : " + per;
+
+      let para = document.getElementById("para");
+      para.innerText =
+        "Given Subject marks are : " +
+        sub1 +
+        "," +
+        sub2 +
+        "," +
+        sub3 +
+        "," +
+        sub4 +
+        "," +
+        sub5;
+      if (per >= 90) {
+        Ans.innerText = "Garade is : A+";
+      } else if (per >= 80) {
+        Ans.innerText = "Garade is : A";
+      } else if (per >= 70) {
+        Ans.innerText = "Garade is : B";
+      } else if (per >= 60) {
+        Ans.innerText = "Garade is : C";
+      } else if (per >= 50) {
+        Ans.innerText = "Garade is : D";
+      } else {
+        Ans.innerText = "Garade is : Fail";
+      }
+    </script>
+  </body>
+</html>

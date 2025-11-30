@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 6 Assignment 6</title>
+  </head>
+  <body>
+    <p id="N1"></p>
+    <p id="N2"></p>
+    <p id="Ans"></p>
+    <script>
+      let num1 = parseInt(prompt("Enter first number"));
+      let num2 = parseInt(prompt("Enter second number"));
+      let op = prompt("enter operation");
+
+      let Ans = document.getElementById("Ans");
+      let N1 = document.getElementById("N1");
+      let N2 = document.getElementById("N2");
+
+      N1.innerText = `Number First : ${num1}`;
+      N2.innerText = `Number Second : ${num2}`;
+
+      switch (op) {
+        case "+":
+          Ans.innerText = `Addition is : ${num1 + num2}`;
+          break;
+        case "-":
+          Ans.innerText = `Substration is : ${num1 - num2}`;
+          break;
+        case "*":
+          Ans.innerText = `Multply is : ${num1 * num2}`;
+          break;
+        case "/":
+          Ans.innerText = `Division is : ${num1 / num2}`;
+          break;
+        case "%":
+          Ans.innerText = `Mod is : ${num1 % num2}`;
+          break;
+        default:
+          Ans.innerText = "Enter correct choice";
+      }
+    </script>
+  </body>
+</html>

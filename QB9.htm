@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 9 Assignment 6</title>
+  </head>
+  <body>
+    <script>
+      document.write("PRINTING PATTERN");
+
+      let row = parseInt(prompt("Enter row size"));
+      let num = 1;
+      for (let i = 0; i <= row; i++) {
+        for (let j = 1; j <= i; j++) {
+          document.write(`${num} `);
+          if (num >= 9) {
+            num = 0;
+          }
+          num++;
+        }
+        document.write(`<br>`);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 3 Assingment 6</title>
+  </head>
+  <body>
+    <p id="Ans"></p>
+    <script>
+      function isDivisibleBy(n, divisor) {
+        return Number.isInteger(n / divisor) && (n / divisor) * divisor === n;
+      }
+
+      let year = parseInt(prompt("Enter a Year"));
+
+      let Ans = document.getElementById("Ans");
+
+      if (
+        isDivisibleBy(year, 400) ||
+        (isDivisibleBy(year, 4) && !isDivisibleBy(year, 100))
+      ) {
+        Ans.innerText = `${year} is leap year`;
+      } else {
+        Ans.innerText = `${year} is NOT leap year`;
+      }
+    </script>
+  </body>
+</html>

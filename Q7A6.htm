@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 7 Assignment 6</title>
+  </head>
+  <body>
+    <p id="Qus"></p>
+    <p id="Ans"></p>
+    <script>
+      let num = parseInt(prompt("Enter Day Number from 1 - 7"));
+      let Ans = document.getElementById("Ans");
+
+      let Qus = document.getElementById("Qus");
+      Qus.innerText = `Given day number is : ${num}`;
+
+      switch (num) {
+        case 1:
+          Ans.innerText = "Sunday";
+          break;
+        case 2:
+          Ans.innerText = "Monday";
+          break;
+        case 3:
+          Ans.innerText = "Tuesday";
+          break;
+        case 4:
+          Ans.innerText = "Wednesday";
+          break;
+        case 5:
+          Ans.innerText = "Thrusday";
+          break;
+        case 6:
+          Ans.innerText = "Friday";
+          break;
+        case 7:
+          Ans.innerText = "Saturday";
+          break;
+        default:
+          Ans.innerText = "Enter correct choice";
+      }
+    </script>
+  </body>
+</html>

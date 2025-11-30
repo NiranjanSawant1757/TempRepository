@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 1 Assignment 6</title>
+  </head>
+  <body>
+    <p id="para"></p>
+    <script>
+      let para = document.getElementById("para");
+
+      let num = parseInt(prompt("Enter a number"));
+      para.innerText = `Given number is ${num}`;
+
+      let a = 0;
+      let b = 1;
+      document.write(a + "_");
+      document.write(b);
+      for (let i = 0; i < num - 2; i++) {
+        let c = a + b;
+        document.write("_" + c);
+        a = b;
+        b = c;
+        c = a;
+      }
+    </script>
+  </body>
+</html>

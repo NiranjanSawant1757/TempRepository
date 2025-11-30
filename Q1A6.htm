@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Second Largest Number</title>
+  </head>
+  <body>
+    <p id="para"></p>
+    <p id="Ans"></p>
+
+    <script>
+      let a = 11;
+      let b = 22;
+      let c = 3;
+
+      let para = document.getElementById("para");
+      let Ans = document.getElementById("Ans");
+
+      para.innerText = "Given numbers are " + a + ", " + b + ", " + c;
+
+      if (a > b) {
+        if (a < c) {
+          Ans.innerText = "Second largest number is " + a;
+          console.log("Second largest number is " + a);
+        } else {
+          if (b > c) {
+            Ans.innerText = "Second largest number is " + b;
+            console.log("Second largest number is " + b);
+          } else {
+            Ans.innerText = "Second largest number is " + c;
+            console.log("Second largest number is " + c);
+          }
+        }
+      } else {
+        if (b < c) {
+          Ans.innerText = "Second largest number is " + b;
+          console.log("Second largest number is " + b);
+        } else {
+          if (a > c) {
+            Ans.innerText = "Second largest number is " + a;
+            console.log("Second largest number is " + a);
+          } else {
+            Ans.innerText = "Second largest number is " + c;
+            console.log("Second largest number is " + c);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

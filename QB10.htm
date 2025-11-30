@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 10 Assignment 6</title>
+  </head>
+  <body>
+    <script>
+      let num = parseInt(prompt("Enter a number"));
+
+      document.write(`Given number is : ${num}<br>`);
+
+      let temp = num;
+      let dig = 0;
+      let sum = 0;
+
+      while (temp > 0) {
+        dig = temp % 10;
+        sum = sum + dig;
+        temp = Math.floor(temp / 10);
+      }
+
+      document.write(`Sum of given number is : ${sum}`);
+    </script>
+  </body>
+</html>
